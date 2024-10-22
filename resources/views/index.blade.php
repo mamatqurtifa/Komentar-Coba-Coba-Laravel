@@ -12,7 +12,7 @@
         @if(session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
         @endif
-        <form action="{{ route('komentar.store') }}" method="POST">
+        <form method="POST" action="{{ secure_url('komentar.store') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama</label>
